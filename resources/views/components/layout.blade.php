@@ -22,16 +22,16 @@
           Home
         </x-nav-link>
         <x-nav-link 
-          href="/about" 
-          :active="request()->is('about')" 
+          href="/jobs" 
+          :active="request()->is('jobs')" 
           class="px-4 py-2 rounded-lg text-sm font-medium text-gray-700 hover:text-emerald-700 hover:bg-emerald-100 transition">
-          About
+          Jobs
         </x-nav-link>
         <x-nav-link 
-          href="/contact" 
-          :active="request()->is('contact')" 
+          href="/jo" 
+          :active="request()->is('job')" 
           class="px-4 py-2 rounded-lg text-sm font-medium text-gray-700 hover:text-emerald-700 hover:bg-emerald-100 transition">
-          Contact
+          job
         </x-nav-link>
       </div>
     </div>
@@ -56,10 +56,7 @@
       <div class="max-w-2xl mx-auto text-lg md:text-xl leading-relaxed mb-10 text-emerald-100">
         {{ $slot }}
       </div>
-      <a href="/about" 
-         class="inline-block bg-emerald-600 text-white font-semibold px-8 py-3 rounded-full shadow-lg hover:bg-emerald-700 hover:scale-105 transform transition duration-300">
-        Explore More
-      </a>
+     
     </div>
   </section>
 
