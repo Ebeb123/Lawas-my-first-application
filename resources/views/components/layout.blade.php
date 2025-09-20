@@ -29,11 +29,7 @@
           class="px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 hover:text-emerald-700 hover:bg-emerald-100 transition duration-300">
           Jobs
         </x-nav-link>
-        <x-nav-link 
-          href="/jo" 
-          :active="request()->is('job')" 
-          class="px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 hover:text-emerald-700 hover:bg-emerald-100 transition duration-300">
-          Job
+        
         </x-nav-link>
       </div>
     </div>
@@ -52,17 +48,23 @@
     </div>
 
     <!-- Hero content -->
-    <div class="relative z-10 px-6">
-      <h1 class="text-5xl md:text-6xl font-extrabold mb-6 tracking-tight drop-shadow-lg animate-fadeInUp">
-        {{ $heading }}
-      </h1>
-      <div class="max-w-2xl mx-auto text-lg md:text-xl leading-relaxed mb-10 text-emerald-100 animate-fadeInUp delay-200">
-        {{ $slot }}
-      </div>
-<a href="/jobs" 
-         class="inline-block bg-emerald-600 text-white font-semibold px-8 py-3 rounded-full shadow-lg hover:bg-emerald-700 hover:scale-105 transform transition duration-300">
-        Explore Jobs
-      </a>
+<div class="relative z-10 px-6">
+  <h1 class="text-5xl md:text-6xl font-extrabold mb-6 tracking-tight drop-shadow-lg animate-fadeInUp">
+    {{ $heading }}
+  </h1>
+  <div class="max-w-2xl mx-auto text-lg md:text-xl leading-relaxed mb-10 text-emerald-100 animate-fadeInUp delay-200">
+    {{ $slot }}
+  </div>
+
+  {{-- ✅ Only show "Explore Jobs" on homepage --}}
+  @if (request()->is('/'))
+    <a href="/jobs" 
+       class="inline-block bg-emerald-600 text-white font-semibold px-8 py-3 rounded-full shadow-lg hover:bg-emerald-700 hover:scale-105 transform transition duration-300">
+      Explore Jobs
+    </a>
+  @endif
+</div>
+
     </div>
   </section>
 
