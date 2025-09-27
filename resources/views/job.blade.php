@@ -39,7 +39,7 @@
         <a href="/jobs" 
            class="inline-block px-6 py-3 bg-emerald-600 text-white font-semibold rounded-full 
                   shadow hover:bg-emerald-700 transition">
-          ← Back to Jobs
+          Apply now
         </a>
       </div>
     </div>

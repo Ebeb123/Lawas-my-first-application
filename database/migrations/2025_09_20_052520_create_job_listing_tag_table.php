@@ -6,10 +6,6 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
-    // in ..._create_job_listing_tag_table.php 
 public function up(): void 
 { 
     Schema::create('job_listing_tag', function (Blueprint $table) { 
