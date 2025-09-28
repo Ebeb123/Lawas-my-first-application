@@ -50,12 +50,7 @@
           class="px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 hover:text-emerald-700 hover:bg-emerald-100 transition duration-300">
           Jobs
         </x-nav-link>
-        <x-nav-link 
-          href="/job" 
-          :active="request()->is('job')" 
-          class="px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 hover:text-emerald-700 hover:bg-emerald-100 transition duration-300">
-          Job
-        </x-nav-link>
+      
       </div>
       
       <!-- Mobile menu button -->
